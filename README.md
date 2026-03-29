@@ -80,7 +80,7 @@ CUMULATIVE GPA: 3.32<br>
 - Academic probation
 ## Author
 
-**Name:** Asma Batool 
+**Name:** Asma Batool <br>
 **Internship:** Apexcify Technologys  
 **GitHub:** (https://github.com/batoolasma2005-lgtm)  
 **Role:** C++ Programing
