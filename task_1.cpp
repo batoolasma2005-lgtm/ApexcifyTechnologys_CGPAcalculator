@@ -74,10 +74,24 @@ int main() {
     float prev_pts = gpa_init * units_init;
     float cgpa = (prev_pts + term_pts) / (units_init + term_units);
 
-    cout << "\n--- OFFICIAL TRANSCRIPT UPDATE ---" << endl;
-    for (auto const& item : buffer) {
-        cout << "LOG: " << item.cid << " | " << item.alpha << " | " << item.units << "u" << endl;
+    cout << "\n--- OFFICIAL TRANSCRIPT ---" << endl;
+cout << "--------------------------------------------------" << endl;
+cout << "CID\tGRADE\tUNITS\tGRADE_POINTS" << endl;
+cout << "--------------------------------------------------" << endl;
+
+for (auto const& item : buffer) {
+    if (item.counts) {
+        cout << item.cid << "\t"
+             << item.alpha << "\t"
+             << item.units << "\t"
+             << (item.val * item.units) << endl;
+    } else {
+        cout << item.cid << "\t"
+             << item.alpha << "\t"
+             << item.units << "\t"
+             << "EXCLUDED" << endl;
     }
+}
 
     cout << "\nTERM GPA: " << (term_units > 0 ? (term_pts / term_units) : 0) << endl;
     cout << "CUMULATIVE GPA: " << cgpa << endl;
